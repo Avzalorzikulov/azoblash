@@ -1,74 +1,35 @@
-a:hover {
-  text-decoration: underline;
-  text-decoration-color: green;
+header {
+  background-color: #ffffff; /* Header background color */
+  padding: 1rem; /* Padding for the header */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-/* Styles for the burger button */
+.logo {
+  height: 64px; /* Logo height */
+}
+
+nav a {
+  color: #4a4a4a; /* Default link color */
+  text-decoration: none; /* Remove underline */
+  padding: 0.5rem 1rem; /* Padding for links */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+nav a:hover,
+nav a.active {
+  color: #38a169; /* Active and hover link color */
+}
+
 .burger-button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  width: 40px;
-  height: 30px;
+  cursor: pointer; /* Pointer cursor for burger button */
 }
 
-/* Burger button styles */
 .burger-button span {
-  display: block;
-  width: 100%;
-  height: 4px;
-  background-color: #4A5568; /* Dark gray color */
-  margin: 2px 0;
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform for animation */
-}
-
-/* Change color on hover */
-.burger-button:hover span {
-  background-color: #2D3748; /* Darker gray on hover */
-}
-
-/* Hide navigation links on small screens */
-@media (max-width: 480px) {
-  nav {
-    display: none; /* Hide by default */
-  }
-
-  nav.flex-col {
-    display: flex; /* Show when burger button is clicked */
-    flex-direction: column;
-    position: absolute;
-    top: 60px; /* Adjust based on header height */
-    left: 0;
-    right: 0;
-    background-color: white; /* Background color for dropdown */
-    z-index: 10; /* Ensure it appears above other content */
-    padding: 10px 0; /* Add padding for better spacing */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  }
-
-  nav a {
-    padding: 10px 20px; /* Add padding to links */
-    color: #4A5568; /* Link color */
-    transition: background-color 0.3s ease; /* Smooth transition */
-    border-radius: 4px; /* Rounded corners for links */
-  }
-
-  nav a:hover {
-    background-color: #F7FAFC; /* Light gray background on hover */
-  }
-}
-
-@media (max-width: 640px) {
-  /* Additional styles for small tablets */
-}
-
-@media (max-width: 768px) {
-  /* Existing styles for medium devices */
-}
-
-@media (max-width: 1024px) {
-  /* Additional styles for tablets */
+  width: 32px; /* Width of burger button lines */
+  height: 4px; /* Height of burger button lines */
+  background-color: #4a4a4a; /* Color of burger button lines */
+  margin: 4px 0; /* Spacing between lines */
 }
